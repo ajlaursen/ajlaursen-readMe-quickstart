@@ -14,16 +14,22 @@ const inquirer = require( "inquirer" );
           },
     ])
     .then((answers) => {
-        // trying to write a dynamic function that will ask a number of questions based on the user input
+        contributorsArr = [];
+        // dynamic function that takes previous answer and creates a number of questions based on the input from before
       for (x = 1; x <= answers.contributors; x++){
-          inquirer.prompt([
-              {
-                  type: 'input',
-                  name: `contributor ${x}`,
-                  message: `Name of contributor number ${x}`
-              }
-          ])
-      }
+          contributorsArr.push({
+            type: 'input',
+            name: `contributor${x}`,
+            message: `Name of contributor number ${x}`
+            },
+            {type: 'input',
+            name: `userName${x}`,
+            message: `What is their GitHub username`}
+            )  
+        }
+        inquirer.prompt(contributorsArr)
+        
+        
   })
     
 
