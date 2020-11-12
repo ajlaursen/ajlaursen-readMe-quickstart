@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generateMarkdown = require("assets/js/generateMarkdown.js");
-// import { generatMarkdown } from "assets/js/generateMarkdown.js";
+//  this is what i am having issues with as well as with below
+const generateMarkdown = require("assets/js/generateMarkdown.js");
+import { generatMarkdown } from "assets/js/generateMarkdown.js";
 
 let data = {};
 let userArrayLength;
@@ -107,45 +108,16 @@ const promptUser = () => {
 };
 
 // function to write README file
+
+//  this is part of problems i am having
 function writeToFile(fileName, data) {
   // generatMarkdown(data);
-  let mdText =`
-# ${data.title}
-
-## Table of Contents
-[Description](##description)
-[Installation](##Installation)
-[Test](##Testing)
-[Project Links](##live Site and Repo)
-[License](##License)
-[Contributors](##Contributors)
-
-## Description
-* ${data.description}
-
-## Installation
-* ${data.installation}
-
-## Testing
-* ${data.testing}
-
-## Live Site and Repo
-* [live Site](${data.liveSite})
-* [Repo](${data.repo})
-
-## License
-* ${data.license}
-
-## Contributors
-* ${data.contribOutput}
-`;
-return mdText
-}
+  let mdText = 
   fs.writeFile(fileName, mdText, function (err) {
     if (err) throw err;
     console.log("File created!");
   });
-
+}
 
 // function to initialize program
 function init() {
