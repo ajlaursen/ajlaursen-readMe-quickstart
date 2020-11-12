@@ -1,6 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `
+  let mdText =`
 # ${data.title}
 
 ## Table of Contents
@@ -30,6 +30,7 @@ function generateMarkdown(data) {
 ## Contributors
 * ${data.contribOutput}
 `;
+return mdText
 }
 
 module.exports = generateMarkdown;
