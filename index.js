@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 //  this is what i am having issues with as well as with below
-const generateMarkdown = require("assets/js/generateMarkdown.js");
-import { generatMarkdown } from "assets/js/generateMarkdown.js";
+// const generateMarkdown = require("assets/js/generateMarkdown.js");
+// import { generatMarkdown } from "assets/js/generateMarkdown.js";
 
 let data = {};
 let userArrayLength;
@@ -70,6 +70,38 @@ const promptUser = () => {
       },
     ])
     .then((answers) => {
+      let license = answers.license;
+      
+      switch (license) {
+        case "MIT License":
+          answers.license = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+        break;
+
+        case "Apache License 2.0": answers.license = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+        break;
+
+        case "GNU General Public License (GPL)": answers.license = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+        break;
+
+        case 'GNU Library or "Lesser" General Public License (LGPL)' : answers.license = `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)`;
+        break;
+
+        case "Mozilla Public License 2.0": answers.license = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+        break;
+
+        case "Common Development and Distribution License": answers.license = `[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)`;
+        break;
+
+        case "Eclipse Public License version 2.0" : answers.license = `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
+        break;
+
+        case 'BSD 3-Clause "New" or "Revised" license': answers.license = `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+        break;
+
+        case 'BSD 2-Clause "Simplified" or "FreeBSD" license': answers.license = `[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`;
+        break;
+      };
+      console.log(answers.license);
       data = answers;
       contributorsArr = [];
       // dynamic function that takes previous answer and creates a number of questions based on the input from before
@@ -101,8 +133,8 @@ const promptUser = () => {
             );
           }
           data.contribOutput = contributorOutput;
-
-          writeToFile("README.md", data);
+          console.log(data);
+          // writeToFile("README.md", data);
         });
     });
 };
@@ -110,14 +142,14 @@ const promptUser = () => {
 // function to write README file
 
 //  this is part of problems i am having
-function writeToFile(fileName, data) {
-  // generatMarkdown(data);
-  let mdText = 
-  fs.writeFile(fileName, mdText, function (err) {
-    if (err) throw err;
-    console.log("File created!");
-  });
-}
+// function writeToFile(fileName, data) {
+//   // generatMarkdown(data);
+//   let mdText = 
+//   fs.writeFile(fileName, mdText, function (err) {
+//     if (err) throw err;
+//     console.log("File created!");
+//   });
+// }
 
 // function to initialize program
 function init() {
@@ -126,3 +158,4 @@ function init() {
 
 // function call to initialize program
 init();
+
