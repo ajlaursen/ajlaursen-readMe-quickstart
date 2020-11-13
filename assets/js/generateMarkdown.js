@@ -33,4 +33,4 @@ function generateMarkdown(data) {
 return mdText
 }
 
-module.exports = generateMarkdown()
+module.exports = generateMarkdown

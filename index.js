@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 //  this is what i am having issues with as well as with below
-// const generateMarkdown = require("./assets/js/generateMarkdown.js");
+const generateMarkdown = require("./assets/js/generateMarkdown.js");
 
 
 
