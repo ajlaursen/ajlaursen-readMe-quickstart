@@ -15,6 +15,7 @@
 
 ## Installation
 * node.js
+* npm install inquirer
 
 ## Testing
 * No testing available
