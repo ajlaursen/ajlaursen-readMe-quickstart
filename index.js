@@ -1,8 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 //  this is what i am having issues with as well as with below
-// const generateMarkdown = require("assets/js/generateMarkdown.js");
-// import { generatMarkdown } from "assets/js/generateMarkdown.js";
+// const generateMarkdown = require("./assets/js/generateMarkdown.js");
+
+
 
 let data = {};
 let userArrayLength;
@@ -101,7 +102,6 @@ const promptUser = () => {
         case 'BSD 2-Clause "Simplified" or "FreeBSD" license': answers.license = `[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`;
         break;
       };
-      console.log(answers.license);
       data = answers;
       contributorsArr = [];
       // dynamic function that takes previous answer and creates a number of questions based on the input from before
@@ -133,23 +133,24 @@ const promptUser = () => {
             );
           }
           data.contribOutput = contributorOutput;
-          console.log(data);
-          // writeToFile("README.md", data);
+          writeToFile("README.md", data);
         });
     });
 };
 
 // function to write README file
 
-//  this is part of problems i am having
-// function writeToFile(fileName, data) {
-//   // generatMarkdown(data);
-//   let mdText = 
-//   fs.writeFile(fileName, mdText, function (err) {
-//     if (err) throw err;
-//     console.log("File created!");
-//   });
-// }
+//  this is part of problem i am having
+function writeToFile(fileName, data) {
+  console.log(fileName, data);
+  // data is returning things its supposed to but generate markdown is not using it properly
+
+  generateMarkdown(data)
+  fs.writeFile(fileName, mdText, function (err) {
+    if (err) throw err;
+    console.log("File created!");
+  });
+}
 
 // function to initialize program
 function init() {
