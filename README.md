@@ -1,5 +1,5 @@
 
-# poopfarts
+# quickstart README
 
 ## Table of Contents
 [Description](##description)  
@@ -10,20 +10,25 @@
 [Contributors](##Contributors)  
 
 ## Description
-* asdoifjaosidjfoaisdjfoaisjdfoiaj
+* this is a quickstart foundation for profesional README files
+* the foundation for this README was created using the generator
 
 ## Installation
-* asdfoaisdjfoaisdjf
+* node.js
 
 ## Testing
-* asdofijasoifjao
+* No testing available
 
 ## Live Site and Repo
-* [live Site](asdfaosidjfaosdijf)
-* [Repo](asdfasdjofaijsodf)
+* [live Site](No livesite)
+* [Repo](https://github.com/ajlaursen/ajlaursen-readMe-quickstart)
 
 ## License
 * [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributors
-* [alex](https://github.com/asdlkasdla)  [asdflkasdlkf](https://github.com/asdfasdfa)  
+* [Alex Laursen](https://github.com/ajlaursen)  
+
+## Demonstration
+
+![demo](./assets/misc/Walkthrough.gif)
