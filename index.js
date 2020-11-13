@@ -133,7 +133,7 @@ const promptUser = () => {
             );
           }
           data.contribOutput = contributorOutput;
-          writeToFile("README.md", data);
+          writeToFile("./output/README.md", data);
         });
     });
 };
@@ -142,10 +142,8 @@ const promptUser = () => {
 
 //  this is part of problem i am having
 function writeToFile(fileName, data) {
-  console.log(fileName, data);
-  // data is returning things its supposed to but generate markdown is not using it properly
-
-  generateMarkdown(data)
+  
+  const mdText = generateMarkdown(data)
   fs.writeFile(fileName, mdText, function (err) {
     if (err) throw err;
     console.log("File created!");
