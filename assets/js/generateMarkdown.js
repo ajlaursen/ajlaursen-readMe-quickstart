@@ -28,7 +28,7 @@ function generateMarkdown(data) {
 * ${data.license}
 
 ## Contributors
-* ${data.contribOutput}
+${data.contribOutput}
 `;
 return mdText
 }

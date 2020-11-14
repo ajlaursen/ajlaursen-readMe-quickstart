@@ -117,6 +117,11 @@ const promptUser = () => {
             type: "input",
             name: `userName${x}`,
             message: `What is their GitHub username`,
+          },
+          {
+            type: "input",
+            name: `email${x}`,
+            message: `What is their E-mail Address`,
           }
         );
       }
@@ -128,8 +133,9 @@ const promptUser = () => {
           for (y = 1; y <= userArrayLength; y++) {
             let contrib = eval(`data.contributor${y}`);
             let user = eval(`data.userName${y}`);
+            let email = eval(`data.email${y}`);
             contributorOutput = contributorOutput.concat(
-              `[${contrib}](https://github.com/${user})  `
+              `* Contributor: [${contrib}](https://github.com/${user}) Email: [${email}](mailto:${email})\n`
             );
           }
           data.contribOutput = contributorOutput;
