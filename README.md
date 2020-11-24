@@ -21,7 +21,7 @@
 * No testing available
 
 ## Live Site and Repo
-* [live Site](No livesite)
+* No livesite
 * [Repo](https://github.com/ajlaursen/ajlaursen-readMe-quickstart)
 
 ## License
