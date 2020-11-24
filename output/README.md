@@ -1,5 +1,5 @@
 
-# Quickstart README
+# Employee Chart
 
 ## Table of Contents
 [Description](##description)  
@@ -10,13 +10,13 @@
 [Contributors](##Contributors)  
 
 ## Description
-* this project creates a foundation for a professional readme
+* this is a dynamic employee flow chart generator. It prompts the user via inquirer about the employees. Then it dynamically displays the responses in HTML.
 
 ## Installation
-* node.js, npm inquirer
+* npm install inquirer
 
 ## Testing
-* No testing available
+* npm run test
 
 ## Live Site and Repo
 * [live Site](No livesite)
