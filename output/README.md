@@ -1,30 +1,30 @@
 
-# Employee Chart
+# React Portfolio
 
 ## Table of Contents
-[Description](##description)  
-[Installation](##Installation)  
-[Test](##Testing)  
-[Project Links](##live-Site-and-Repo)  
-[License](##License)  
-[Contributors](##Contributors)  
+[Description](#description)  
+[Installation](#Installation)  
+[Test](#Testing)  
+[Project Links](#live-Site-and-Repo)  
+[License](#License)  
+[Contributors](#Contributors)  
 
 ## Description
-* this is a dynamic employee flow chart generator. It prompts the user via inquirer about the employees. Then it dynamically displays the responses in HTML.
+* Current professional portfolio. Created with React and TailwindCSS. Designed to be easily updateable.
 
 ## Installation
-* npm install inquirer
+* Use live site
 
 ## Testing
-* npm run test
+* No testing available
 
 ## Live Site and Repo
-* [live Site](No livesite)
-* [Repo](https://github.com/ajlaursen/ajlaursen-readMe-quickstart)
+* [live Site](https://ajlaursen.codes)
+* [Repo](https://github.com/ajlaursen/react-portfolio)
 
 ## License
 * [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributors
-* Contributor: [Alex Laursen](https://github.com/ajlaursen) Email: [contact@ajlaursen.codes](mailto:contact@ajlaursen.codes)
+* Contributor: [Alex Laursen](https://github.com/Ajlaursen) Email: [contact@ajlaursen.codes](mailto:contact@ajlaursen.codes)
 
